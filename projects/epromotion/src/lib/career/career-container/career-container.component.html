@@ -1,0 +1,26 @@
+<fps-career-lines
+  [lines]="careerLines"
+  [editedLine]="editedLine"
+  (edit)="onEdit($event)"
+  (archive)="onArchive($event)"
+  (cancel)="onCancel()"
+  (save)="onUpdate($event)"
+></fps-career-lines>
+
+<fps-career-line-edit
+  *ngIf="isAddMode"
+  (cancel)="onCancel()"
+  (save)="onCreate($event)"
+></fps-career-line-edit>
+
+<div>
+  <button
+    mat-raised-button
+    color="primary"
+    type="button"
+    class="button"
+    (click)="onAdd()"
+  >
+    +
+  </button>
+</div>

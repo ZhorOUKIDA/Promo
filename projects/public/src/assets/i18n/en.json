@@ -1,0 +1,42 @@
+{
+  "Common": {
+    "No": "No",
+    "Yes": "Yes",
+    "StartDate": "Start date",
+    "EndDate": "End date"
+  },
+  "Auth": {
+    "Login": "Login",
+    "Logoff": "Logoff"
+  },
+  "Employee": {
+    "MyDossier": {
+      "Title": "My Dossier",
+      "PersonalInfo": {
+        "Title": "Personal info",
+        "FirstName": "First name",
+        "LastName": "Last name",
+        "Birthdate": "Birthdate",
+        "Address": "Address"
+      },
+      "Career": {
+        "Title": "Career within Foreign Affairs",
+        "Department": "Service",
+        "Function": "Function"
+      },
+      "Promotions": {
+        "Title": "Promotion history"
+      }
+    }
+  },
+  "Vacancies": {
+    "Title": "Vacancies",
+    "MyVacancy": "Vacancy"
+  },
+  "Application": {
+    "Motivation": "Motivation",
+    "Trainings": "Trainings",
+    "Experience": "Other experiences outside FPS Foreign Affairs",
+    "Attachments": "Attachments"
+  }
+}

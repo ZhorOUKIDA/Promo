@@ -1,0 +1,58 @@
+{
+  "Common": {
+    "No": "Non",
+    "Yes": "Oui",
+    "StartDate": "Date de début",
+    "EndDate": "Date de fin",
+    "Add": "Ajouter",
+    "Edit": "Modifier",
+    "Delete": "Supprimer",
+    "Cancel": "Annuler",
+    "Save": "Sauvegarder"
+  },
+  "Validation": {
+    "Required": "Ce champ est requis."
+  },
+  "Auth": {
+    "Login": "Se connecter",
+    "Logoff": "Se déconnecter"
+  },
+  "Employee": {
+    "MyDossier": {
+      "Title": "Mon Dossier",
+      "PersonalInfo": {
+        "Title": "Données personelles",
+        "FirstName": "Prénom",
+        "LastName": "Nom",
+        "Birthdate": "Date de naissance",
+        "Address": "Adresse",
+        "LanguageRoleCode": "Rôle linguistique",
+        "EngagementDateForeignAffairs": "Date d'engagement AE",
+        "OfficialEmail": "Email officiel",
+        "PrivateEmail": "Email privé",
+        "OfficialPhoneNumber": "Numéro de téléphone officiel",
+        "OfficialMobileNumber": "Numéro de GSM officiel",
+        "Remark": "Remarque",
+        "NationalNumber": "Numéro de registre national"
+      },
+      "Career": {
+        "Title": "Carrière au sein du SPF Affaires Etrangères",
+        "Department": "Service",
+        "Function": "Fonction"
+      },
+      "Promotions": {
+        "Title": "Historique de promotions"
+      }
+    }
+  },
+  "Vacancies": {
+    "Title": "Vacances",
+    "MyVacancy": "Vacance"
+  },
+  "Application": {
+    "Motivation": "Motivation",
+    "Trainings": "Formations",
+    "Experience": "Autres expériences professionelles en dehors du SPF Affaires étrangères",
+    "Attachments": "Annexes"
+  }
+}

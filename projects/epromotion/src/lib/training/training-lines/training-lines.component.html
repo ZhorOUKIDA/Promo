@@ -1,0 +1,19 @@
+<div fxLayout="column" fxLayoutAlign="space-between stretch" fxLayoutGap="16px">
+  <ng-container *ngFor="let line of lines">
+    <fps-training-line-view
+      *ngIf="!isLineEdited(line)"
+      [line]="line"
+      (edit)="onEdit($event)"
+      (archive)="onArchive($event)"
+    >
+    </fps-training-line-view>
+
+    <fps-training-line-edit
+      *ngIf="isLineEdited(line)"
+      [line]="line"
+      (save)="onSave($event)"
+      (cancel)="onCancel()"
+    >
+    </fps-training-line-edit>
+  </ng-container>
+</div>

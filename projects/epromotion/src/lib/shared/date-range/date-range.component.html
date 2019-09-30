@@ -1,0 +1,44 @@
+<mat-form-field
+  class="form-element"
+  [formGroup]="dateRangeForm.controls.dateRange"
+>
+  <input
+    matInput
+    [matDatepicker]="startDatePicker"
+    placeholder="{{ 'Common.StartDate' | translate }}"
+    formControlName="startDate"
+  />
+  <mat-datepicker-toggle
+    matSuffix
+    [for]="startDatePicker"
+  ></mat-datepicker-toggle>
+  <mat-datepicker #startDatePicker></mat-datepicker>
+  <mat-error ng-if="getFormControl('startDate')?.invalid">
+    {{ 'Validation.Required' | translate }}
+  </mat-error>
+</mat-form-field>
+<mat-icon>arrow_right_alt</mat-icon>
+<mat-form-field
+  class="form-element"
+  [formGroup]="dateRangeForm.controls.dateRange"
+>
+  <input
+    matInput
+    [matDatepicker]="endDatePicker"
+    placeholder="{{ 'Common.EndDate' | translate }}"
+    formControlName="endDate"
+  />
+  <mat-datepicker-toggle
+    matSuffix
+    [for]="endDatePicker"
+  ></mat-datepicker-toggle>
+  <mat-datepicker #endDatePicker></mat-datepicker>
+  <mat-error ng-if="getFormControl('endDate').errors">
+    {{
+      getFormControl('endDate').errors &&
+        getFormControl('endDate').errors['dateRangeValidator']
+    }}
+  </mat-error>
+
+  <!-- {{ dateRangeForm.controls['dateRange'].error }} -->
+</mat-form-field>

@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button
+      type="button"
+      mat-icon-button
+      [attr.aria-label]="'Shell.ToggleSidenav' | translate"
+      (click)="sidenav.toggle()"
+    >
+      <mat-icon [attr.aria-label]="'Shell.ToggleSidenavIcon' | translate"
+        >menu
+      </mat-icon>
+    </button>
+
+    <ng-content select="[fps-navbar-items]"></ng-content>
+    <span class="spacer"></span>
+    <ng-content select="[fps-navbar-auth]"></ng-content>
+    <ng-content select="[fps-navbar-language]"></ng-content>
+  </mat-toolbar-row>
+</mat-toolbar>

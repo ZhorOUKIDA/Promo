@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-card-title>
+    {{ vacancy.shortDescription }}
+  </mat-card-title>
+  <mat-card-subtitle>
+    {{ vacancy.longDescription }}
+  </mat-card-subtitle>
+  <mat-card-content>
+    <mat-nav-list>
+      <mat-list-item *ngFor="let attachment of vacancy.attachments">
+        <a matLine [href]="attachment.url">
+          <button mat-icon-button type="button">
+            <mat-icon>attach_file</mat-icon>
+          </button>
+          {{ attachment.fileName }}
+        </a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-card-content>
+</mat-card>

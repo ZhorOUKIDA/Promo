@@ -1,0 +1,17 @@
+<mat-button-toggle-group
+  #group="matButtonToggleGroup"
+  [multiple]="true"
+  (change)="onFilterChanged($event)"
+>
+  <mat-button-toggle value="hasApplied" aria-label="hasApplied">
+    Applied
+  </mat-button-toggle>
+  <mat-button-toggle value="isClosed" aria-label="isClosed">
+    Closed
+  </mat-button-toggle>
+  <mat-button-toggle value="isPublished" aria-label="isPublished">
+    Published
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+<fps-vacancy-list [vacancies]="filteredVacancies"></fps-vacancy-list>

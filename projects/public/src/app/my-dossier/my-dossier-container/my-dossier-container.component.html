@@ -1,0 +1,19 @@
+<ng-template #sidenavContentRef>
+  Sidenav commenté
+  {{ 'Hello' | translate }}
+  <!-- <mat-nav-list>
+    <a
+      *ngFor="let navLink of navLinks"
+      mat-list-item
+      [routerLink]="navLink.route"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      {{ navLink.title | translate }}
+    </a>
+  </mat-nav-list> -->
+</ng-template>
+
+<article>
+  <router-outlet></router-outlet>
+</article>

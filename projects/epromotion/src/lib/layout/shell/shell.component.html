@@ -1,0 +1,33 @@
+<fps-navbar [sidenav]="sidenav">
+  <ng-container fps-navbar-items>
+    <ng-content select="[fps-navbar-items]"></ng-content>
+  </ng-container>
+  <ng-container fps-navbar-auth>
+    <ng-content select="[fps-navbar-auth]"></ng-content>
+  </ng-container>
+  <ng-container fps-navbar-language>
+    <ng-content select="[fps-navbar-language]"></ng-content>
+  </ng-container>
+</fps-navbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #sidenav
+    class="sidenav"
+    [fixedInViewport]="false"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <ng-container #content></ng-container>
+
+    <router-outlet name="sidenav"></router-outlet>
+  </mat-sidenav>
+
+  <main>
+    <router-outlet></router-outlet>
+    <ng-component></ng-component>
+  </main>
+</mat-sidenav-container>
+
+<!-- footer -->

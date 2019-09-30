@@ -1,0 +1,56 @@
+<form
+  [formGroup]="lineForm"
+  (ngSubmit)="onSave()"
+  autocomplete="off"
+  novalidate
+>
+  <mat-card
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+    fxLayoutGap="16px"
+  >
+    <fps-date-range
+      [dateRange]="line"
+      [dateRangeForm]="lineForm"
+      fxFlex="40"
+      fxLayout="row"
+      fxLayoutGap="8px"
+      fxLayoutAlign="start center"
+    ></fps-date-range>
+
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="{{ 'Trainings.Organization' | translate }}"
+        formControlName="organization"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="{{ 'Trainings.Subject' | translate }}"
+        formControlName="subject"
+      />
+    </mat-form-field>
+
+    <nav fxFlex="20" fxLayout="row" fxLayoutGap="8px">
+      <button
+        mat-mini-fab
+        color="primary"
+        type="submit"
+        matTooltip="{{ 'Common.Save' | translate }}"
+        [disabled]="lineForm.invalid"
+      >
+        <mat-icon>save</mat-icon>
+      </button>
+      <button
+        type="button"
+        mat-icon-button
+        matTooltip="{{ 'Common.Cancel' | translate }}"
+        (click)="onCancel()"
+      >
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </nav>
+  </mat-card>
+</form>

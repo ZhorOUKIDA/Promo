@@ -1,0 +1,20 @@
+<fps-training-lines
+  [lines]="trainingLines"
+  [editedLine]="editedLine"
+  (edit)="onEdit($event)"
+  (cancel)="onCancel()"
+  (save)="onUpdate($event)"
+  (archive)="onArchive($event)"
+></fps-training-lines>
+
+<fps-training-line-edit
+  *ngIf="isAddMode"
+  (cancel)="onCancel()"
+  (save)="onCreate($event)"
+></fps-training-line-edit>
+
+<div>
+  <button mat-raised-button color="primary" type="button" (click)="onAdd()">
+    +
+  </button>
+</div>

@@ -1,0 +1,58 @@
+{
+  "Common": {
+    "No": "Nee",
+    "Yes": "Ja",
+    "StartDate": "Startdatum",
+    "EndDate": "Einddatum",
+    "Add": "Toevoegen",
+    "Edit": "Wijzigen",
+    "Delete": "Verwijderen",
+    "Cancel": "Annuleren",
+    "Save": "Bewaren"
+  },
+  "Validation": {
+    "Required": "Dit veld is verplicht."
+  },
+  "Auth": {
+    "Login": "Aanmelden",
+    "Logoff": "Afmelden"
+  },
+  "Employee": {
+    "MyDossier": {
+      "Title": "Mijn Dossier",
+      "PersonalInfo": {
+        "Title": "Persoonlijke gegevens",
+        "FirstName": "Voornaam",
+        "LastName": "Naam",
+        "Birthdate": "Geboortedatum",
+        "Address": "Adres",
+        "LanguageRoleCode": "Taalrol",
+        "EngagementDateForeignAffairs": "Aanwervingsdatum BuZa",
+        "OfficialEmail": "Officieel e-mailadress",
+        "PrivateEmail": "Privé e-mailadress",
+        "OfficialPhoneNumber": "Officieel telefoonnummer",
+        "OfficialMobileNumber": "Officieel gsm-nummer",
+        "Remark": "Opmerking",
+        "NationalNumber": "Rijksregisternummer"
+      },
+      "Career": {
+        "Title": "Carrière binnen de FOD Buitenlandse Zaken",
+        "Department": "Dienst",
+        "Function": "Functie"
+      },
+      "Promotions": {
+        "Title": "Bevorderingen"
+      }
+    }
+  },
+  "Vacancies": {
+    "Title": "Vacatures",
+    "MyVacancy": "Vacature"
+  },
+  "Application": {
+    "Motivation": "Motivatie",
+    "Trainings": "Opleidingen",
+    "Experience": "Andere professionele ervaringen buiten FOD Buitenlandse Zaken",
+    "Attachments": "Bijlagen"
+  }
+}

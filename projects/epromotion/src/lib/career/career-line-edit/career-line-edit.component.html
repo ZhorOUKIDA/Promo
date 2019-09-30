@@ -1,0 +1,55 @@
+<form
+  [formGroup]="lineForm"
+  (ngSubmit)="onSave()"
+  autocomplete="off"
+  novalidate
+>
+  <mat-card
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+    fxLayoutGap="16px"
+  >
+    <fps-date-range
+      [dateRange]="line"
+      [dateRangeForm]="lineForm"
+      fxFlex="40"
+      fxLayout="row"
+      fxLayoutGap="8px"
+      fxLayoutAlign="start center"
+    ></fps-date-range>
+
+    <fps-department-picker
+      [control]="lineForm.get('service')"
+      [initialDisplay]="line?.serviceName"
+      fxFlex="20"
+    >
+    </fps-department-picker>
+
+    <fps-function-picker
+      [control]="lineForm.get('function')"
+      [initialDisplay]="line?.statutoryFunctionName"
+      fxFlex="20"
+    >
+    </fps-function-picker>
+
+    <nav fxFlex="20" fxLayout="row" fxLayoutGap="8px">
+      <button
+        mat-mini-fab
+        color="primary"
+        type="submit"
+        matTooltip="{{ 'Common.Save' | translate }}"
+        [disabled]="lineForm.invalid"
+      >
+        <mat-icon>save</mat-icon>
+      </button>
+      <button
+        type="button"
+        mat-icon-button
+        matTooltip="{{ 'Common.Cancel' | translate }}"
+        (click)="onCancel()"
+      >
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </nav>
+  </mat-card>
+</form>

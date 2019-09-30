@@ -1,0 +1,40 @@
+<mat-card
+  fxLayout="row"
+  fxLayoutAlign="space-between center"
+  fxLayoutGap="16px"
+>
+  <label
+    fxFlex="40"
+    fxLayout="row"
+    fxLayoutGap="8px"
+    fxLayoutAlign="start center"
+  >
+    <span>{{ line.startDate | date: 'dd/MM/yyyy' }}</span>
+    <mat-icon>arrow_right_alt</mat-icon>
+    <span>{{ (line.endDate | date: 'dd/MM/yyyy') || '&hellip;' }}</span>
+  </label>
+  <label fxFlex="20">{{ line.organization }}</label>
+  <label fxFlex="20">{{ line.subject }}</label>
+
+  <nav fxFlex="20" fxLayout="row" fxLayoutGap="8px">
+    <button
+      type="button"
+      mat-mini-fab
+      color="primary"
+      matTooltip="{{ 'Common.Edit' | translate }}"
+      (click)="onEdit()"
+    >
+      <mat-icon>edit</mat-icon>
+    </button>
+
+    <button
+      type="button"
+      mat-mini-fab
+      color="warn"
+      matTooltip="{{ 'Common.Delete' | translate }}"
+      (click)="onArchive()"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </nav>
+</mat-card>
